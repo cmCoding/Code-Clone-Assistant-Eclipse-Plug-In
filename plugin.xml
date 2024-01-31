@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="ECL_Dummy_Plug-In.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="ECL_Dummy_Plug-In.commands.category"
+            name="Sample Command"
+            id="ECL_Dummy_Plug-In.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="ecl_dummy_plugin.handlers.SampleHandler"
+            commandId="ECL_Dummy_Plug-In.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="ECL_Dummy_Plug-In.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="ECL_Dummy_Plug-In.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="ECL_Dummy_Plug-In.commands.sampleCommand"
+                  id="ECL_Dummy_Plug-In.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="ECL_Dummy_Plug-In.toolbars.sampleToolbar">
+            <command
+                  id="ECL_Dummy_Plug-In.toolbars.sampleCommand"
+                  commandId="ECL_Dummy_Plug-In.commands.sampleCommand"
+                  icon="icons/icon.png"
+                  tooltip="Open Code Clone Assistant">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+   </extension>
+
+</plugin>
