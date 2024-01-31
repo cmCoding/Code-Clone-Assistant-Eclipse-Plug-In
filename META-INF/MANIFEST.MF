@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Code Clone Assistant Plugin
+Bundle-SymbolicName: CodeCloneAssistantPlugin;singleton:=true
+Bundle-Version: 1.0.1
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.ui.editors;bundle-version="3.14.400"
+Automatic-Module-Name: ECL.Dummy.Plug.In
+Bundle-ClassPath: .,
+ jars/sqlite-jdbc-3.40.1.0.jar
+Bundle-RequiredExecutionEnvironment: JavaSE-17
